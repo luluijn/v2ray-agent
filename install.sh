@@ -5,7 +5,7 @@
 export LANG=en_US.UTF-8
 
 echoContent() {
-	case $1 in
+	
 	# 红色
 	"red")
 		# shellcheck disable=SC2154
@@ -30,7 +30,7 @@ echoContent() {
 	"yellow")
 		${echoType} "\033[33m${printN}$2 \033[0m"
 		;;
-	esac
+	
 }
 checkSystem() {
 	if [[ -n $(find /etc -name "redhat-release") ]] || grep </proc/version -q -i "centos"; then
